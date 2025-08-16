@@ -1,0 +1,872 @@
+/* Estilos Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Principal */
+.workana-jobs-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Sidebar de Filtros */
+.jobs-filter-sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-section {
+    margin-bottom: 25px;
+}
+
+.filter-title {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-item {
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.filter-item.active {
+    color: rgb(0, 89, 255);
+    font-weight: bold;
+}
+
+/* Conteúdo Principal */
+.jobs-main-content {
+    flex: 1;
+}
+
+.jobs-search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+}
+
+.search-button {
+    background-color: rgb(0, 89, 255);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.jobs-sorting {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sorting-label {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.sorting-select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Lista de Jobs */
+.jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.job-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.job-title {
+    font-size: 18px;
+    margin: 0;
+    color: #222;
+}
+
+.job-budget {
+    font-weight: bold;
+    color: rgb(0, 89, 255);
+}
+
+.job-description {
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.job-skills {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #555;
+}
+
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* Estilos do Modal */
+.job-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    width: 60%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-title {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.modal-budget {
+    font-weight: bold;
+    color: rgb(0, 89, 255);
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.modal-section {
+    margin: 25px 0;
+}
+
+.modal-section h3 {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.modal-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 20px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.apply-button {
+    background-color: rgb(0, 89, 255);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+    background-color: rgb(0, 70, 210);
+}
+
+/* Paginação */
+.jobs-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 5px;
+}
+
+.pagination-button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination-button.active {
+    background: rgb(0, 89, 255);
+    color: white;
+    border-color: rgb(0, 89, 255);
+}
+
+.pagination-ellipsis {
+    padding: 8px;
+}
+
+.pagination-next {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Header e Logo */
+.logo img {
+    float: left;
+    margin-right: 5px;
+}
+
+.logo h2 {
+    float: right;
+}
+
+.logo h2 span {
+    color: rgb(0, 89, 255);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===================================================== */
+/* CORREÇÃO DEFINITIVA PARA FOTO DE PERFIL DEFORMADA     */
+/* ===================================================== */
+
+/* Garante que o container do ícone se comporte bem. */
+.dropdown .profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Esconde qualquer parte da imagem que possa vazar */
+}
+
+/* Regra mais específica e forçada para a imagem. */
+.dropdown .profile-icon .profile {
+    width: 100% !important; /* Força a imagem a ocupar todo o container */
+    height: 100% !important; /* Força a imagem a ocupar todo o container */
+    object-fit: cover !important; /* Força a manutenção do aspecto e o corte correto */
+    border-radius: 0; /* A borda arredondada fica no container */
+}
+
+
+/* -------------------------------------DROPDOWN MENU PERFIL--------------------------------------- */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    z-index: 1000;
+  }
+
+  .dropdown-menu span{
+    color: rgb(0, 89, 255);
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .dropdown-menu strong {
+    font-size: 14px;
+  }
+
+  .dropdown-menu p {
+    font-size: 13px;
+    margin: 6px 0;
+  }
+
+  .highlight-btn {
+    display: inline-block;
+    border: 1px solid rgb(0, 89, 255);
+    color: rgb(0, 89, 255);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 8px 0;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .highlight-btn:hover {
+    background-color: #f4f0ff;
+  }
+
+  .purple-btn {
+    background-color: rgb(0, 89, 255);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .section {
+    margin: 16px 0;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 6px 0;
+    font-size: 14px;
+  }
+
+  .dropdown-menu a:hover {
+    text-decoration: underline;
+  }
+
+  .language-options {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .language-options button {
+    background: #f1f1f1;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+
+  .language-options .active {
+    background-color: rgb(0, 89, 255);
+    color: white;
+  }
+
+/* -------------------------------------MOBILE RESPONSIVENESS--------------------------------------- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .dropdown {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .dropdown-menu {
+        top: 60px;
+        right: 10px;
+        width: calc(100% - 20px);
+    }
+
+    .workana-jobs-container {
+        flex-direction: column;
+        margin: 10px;
+        gap: 10px;
+    }
+
+    .jobs-filter-sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .filter-section {
+        margin-bottom: 15px;
+    }
+
+    .jobs-main-content {
+        padding: 0 10px;
+    }
+
+    .jobs-search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-input {
+        border-radius: 4px;
+    }
+
+    .search-button {
+        border-radius: 4px;
+        padding: 10px 15px;
+    }
+
+    .jobs-sorting {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .jobs-list {
+        gap: 10px;
+    }
+
+    .job-card {
+        padding: 15px;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .close-modal {
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+    }
+
+    .apply-button {
+        padding: 10px 20px;
+    }
+
+    .jobs-pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .pagination-button,
+    .pagination-next {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown-menu {
+        width: calc(100% - 20px);
+        right: 10px;
+    }
+
+    .modal-content {
+        margin: 5% auto;
+        width: 95%;
+    }
+}
+
+/* ... (todos os estilos existentes para a página trabalhos.css) ... */
+
+/* Adicionado ao final do arquivo */
+
+/* --- ESTILOS PARA O MODAL DE CHAT DIRETO --- */
+.chat-area {
+    height: 300px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f8f9fa;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-area textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: none;
+    height: 50px;
+    font-family: inherit;
+}
+
+.chat-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chat-actions button {
+    padding: 0 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+#chatAttachmentBtn {
+    background-color: #f0f0f0;
+    color: #333;
+    flex-grow: 1;
+    font-size: 1.2em;
+}
+/* Estilo para a tag de categoria da vaga */
+.vaga-category-tag {
+    display: inline-block;
+    background-color: #e0eafc; /* Um azul claro e suave */
+    color: #3d5a80; /* Um azul escuro para o texto */
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px; /* Espaço entre a tag e a descrição */
+    margin-top: 5px;
+}
+
+/* --- ESTILOS PARA AS MENSAGENS DO CHAT --- */
+.message-bubble {
+    padding: 8px 14px;
+    border-radius: 18px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message-bubble.enviada {
+    background-color: #007bff; /* Azul para mensagens enviadas */
+    color: white;
+    align-self: flex-end; /* Alinha à direita */
+    border-bottom-right-radius: 4px;
+}
+
+.message-bubble.recebida {
+    background-color: #e9ecef; /* Cinza claro para mensagens recebidas */
+    color: #333;
+    align-self: flex-start; /* Alinha à esquerda */
+    border-bottom-left-radius: 4px;
+}
+
+/* --- ESTILOS ATUALIZADOS PARA A ÁREA DE INPUT DO CHAT --- */
+
+.chat-input-area {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os botões e o input */
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+#chatAttachmentBtn {
+    background: transparent;
+    border: none;
+    font-size: 1.6em; /* Aumenta o tamanho do clipe */
+    cursor: pointer;
+    color: #5f6368;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+#chatAttachmentBtn:hover {
+    color: #000;
+}
+
+#chatMessageInput {
+    flex-grow: 1; /* Faz o campo de texto ocupar o espaço disponível */
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 10px 15px;
+    resize: none; /* Impede que o usuário redimensione */
+    font-family: inherit;
+    font-size: 1em;
+    height: 42px; /* Altura inicial */
+}
+
+#chatSendBtn {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#chatSendBtn:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+/* --- ESTILOS PARA O CONTAINER DOS ÍCONES E NOTIFICAÇÃO --- */
+.navbar-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espaço entre o sino e o perfil */
+}
+
+.notification-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5em; /* Tamanho do sino */
+    color: #555;
+}
+
+.notification-icon:hover {
+    color: #000;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #dc3545; /* Vermelho */
+    border-radius: 50%;
+    border: 2px solid white;
+    display: none; /* Começa escondido */
+}
+
+/* --- ESTILOS PARA O DROPDOWN DE NOTIFICAÇÕES --- */
+.notification-dropdown {
+    display: none; /* Começa escondido */
+    position: absolute;
+    top: 45px; /* Distância do topo do ícone */
+    right: -15px; /* Ajuste para alinhar com o sino */
+    width: 350px;
+    max-height: 400px; /* Altura máxima antes de criar uma barra de rolagem */
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1001; /* Garante que fique sobre outros elementos */
+    text-align: left;
+    font-size: 14px;
+}
+
+.notification-header {
+    padding: 12px 16px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.notification-list {
+    /* O conteúdo será preenchido pelo JS */
+}
+
+.notification-item {
+    padding: 12px 16px;
+    display: block;
+    border-bottom: 1px solid #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background-color: #f8f9fa;
+}
+
+.notification-item .sender-name {
+    font-weight: bold;
+}
+
+.notification-item .message-snippet {
+    color: #555;
+}
+
+.notification-list .no-notifications {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+}
+.job-card .company-link {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.job-card .company-link:hover {
+    text-decoration: underline;
+    color: rgb(0, 89, 255);
+}
+
+/* ... (todos os estilos existentes) ... */
+
+/* --- ESTILOS PARA O BOTÃO DE ACESSIBILIDADE NO HEADER --- */
+.header-accessibility-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555; /* Mesma cor do ícone de sino */
+    font-size: 1.5em; /* Tamanho similar ao ícone de sino */
+}
+
+.header-accessibility-btn:hover {
+    color: #000;
+}
+
+.header-accessibility-btn img {
+    width: 28px; /* Tamanho ajustado para o header */
+    height: 28px;
+    /* Converte o ícone SVG para a cor do texto (cinza) */
+    filter: invert(39%) sepia(0%) saturate(1209%) hue-rotate(185deg) brightness(91%) contrast(85%);
+    transition: filter 0.3s ease;
+}
+
+.header-accessibility-btn:hover img {
+    /* Deixa o ícone mais escuro no hover */
+    filter: invert(0%) sepia(87%) saturate(7500%) hue-rotate(28deg) brightness(88%) contrast(108%);
+}
+
+/* Estilo para quando o botão estiver ativo (leitura ligada) */
+.header-accessibility-btn.active img {
+    /* Filtro para deixar o ícone verde, indicando que está ativo */
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+#voice-command-toggle.listening img {
+    /* Filtro para deixar o ícone vermelho, indicando gravação */
+    filter: invert(27%) sepia(87%) saturate(5437%) hue-rotate(352deg) brightness(94%) contrast(91%);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

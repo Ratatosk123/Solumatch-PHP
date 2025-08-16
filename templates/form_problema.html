@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relate o seu problema</title>
+    <link rel="stylesheet" href="../CSS/form_problema.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+</head>
+<!-- NAVBAR -->
+<header class="header">
+  <!-- Barra de navegação principal -->
+  <nav class="navbar">
+      <!-- Logo/nome da empresa -->
+      <div class="logo">
+          <img src="../misc/logo2.jpg" width="50vh">
+          <h2>Solu<span>Match<span></h2>
+      </div>
+      
+      <!-- Links de navegação do menu -->
+      <div class="nav-links">
+          <!-- Link ativo (página atual) -->
+          <a src="../templates/form_problema.html" class="nav-link active">Eu quero contratar</a>
+          <!-- Link normal -->
+          <a href="#" class="nav-link">Eu quero trabalhar</a>
+          <!-- Link de login -->
+          <a href="../templates/login.php" class="login-link">Faça login</a>
+          <!-- Botão principal de call-to-action -->
+          <a href="../templates/cadastro.php"  class="cta-button">Cadastre-se</a>
+      </div>
+      
+      <!-- Menu hambúrguer para dispositivos móveis (3 linhas) -->
+      <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+  </nav>
+</header>
+
+<body>
+    <div class="container">
+        <h1>Conte sobre o problema que esta passando:</h1>
+       
+        <div id="categoriesSection">
+            <ul class="category-list">
+                <li class="category-item">
+                    <input type="checkbox" id="ti" class="category-checkbox" value="ti">
+                    <label for="ti" class="category-title">TI e Programação</label>
+                    <div class="category-description">Programação de sites, e-commerce e apps mobile</div>
+                </li>
+               
+                <li class="category-item">
+                    <input type="checkbox" id="design" class="category-checkbox" value="design">
+                    <label for="design" class="category-title">Design e Multimedia</label>
+                    <div class="category-description">Logotipos, sites, vídeos, ilustrações, etc.</div>
+                </li>
+               
+                <li class="category-item">
+                    <input type="checkbox" id="traducao" class="category-checkbox" value="traducao">
+                    <label for="traducao" class="category-title">Tradução e conteúdos</label>
+                    <div class="category-description">Editores, redatores, tradutores para web e artigos</div>
+                </li>
+               
+                <li class="category-item">
+                    <input type="checkbox" id="marketing" class="category-checkbox" value="marketing">
+                    <label for="marketing" class="category-title">Marketing e Vendas</label>
+                    <div class="category-description">Gerenciamento e publicidade em redes, posicionamento e e-mails</div>
+                </li>
+               
+                <li class="category-item">
+                    <input type="checkbox" id="suporte" class="category-checkbox" value="suporte">
+                    <label for="suporte" class="category-title">Suporte Administrativo</label>
+                    <div class="category-description"></div>
+                </li>
+               
+                <li class="category-item">
+                    <input type="checkbox" id="juridico" class="category-checkbox" value="juridico">
+                    <label for="juridico" class="category-title">Jurídico</label>
+                    <div class="category-description"></div>
+                </li>
+               
+                <li class="category-item">
+                    <input type="checkbox" id="financas" class="category-checkbox" value="financas">
+                    <label for="financas" class="category-title">Finanças e Administração</label>
+                    <div class="category-description"></div>
+                </li>
+            </ul>
+           
+            <button class="continue-btn" id="continueBtn" disabled>Continuar</button>
+        </div>
+       
+        <div id="questionsSection" class="questions-container">
+            <h2 id="questionsTitle">Perguntas sobre o seu problema</h2>
+            <div id="dynamicQuestions"></div>
+            <button class="continue-btn" id="submitBtn">Enviar Projeto</button>
+            <button class="continue-btn back-btn" id="backBtn">Voltar</button>
+        </div>
+    </div>
+    <script src="../JavaScript/form_problema.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #219ebc;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.seta {
+  font-size: 12px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+}
+
+.add-servico {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px dashed #666;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+}
+
+.local-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.uf {
+  width: 50px;
+}
+
+.area, .raio {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.fa-solid fa-circle-user {
+    font-size: 50px;
+}
+
+.backgroundwhite {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+.row {
+  display: flex;
+}
+.form-control {
+  margin-left: 10px;
+}
+

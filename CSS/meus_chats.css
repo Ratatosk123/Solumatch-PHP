@@ -1,0 +1,299 @@
+/* solumatch_atualizado/CSS/meus_chats.css */
+
+.inbox-container {
+    display: flex;
+    height: calc(100vh - 70px); /* Altura total da tela menos o header */
+    background: #f8f9fa;
+}
+
+/* --- Coluna da Lista de Conversas (Esquerda) --- */
+.conversation-list {
+    width: 350px;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.list-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.list-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.list-content {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.conversation-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.conversation-item:hover {
+    background-color: #f8f9fa;
+}
+
+.conversation-item.active {
+    background-color: #e9f2ff;
+    border-right: 3px solid rgb(0, 89, 255);
+}
+
+.conversation-item-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.conversation-item-details {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.item-user-name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.item-vaga-title {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-last-message {
+    font-size: 0.9em;
+    color: #777;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.unread-count {
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 7px;
+    float: right;
+}
+
+/* --- Coluna do Chat (Direita) --- */
+.chat-view {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.chat-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat-header-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.chat-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.chat-profile-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.chat-profile-link:hover h2 {
+    text-decoration: underline;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.no-chat-selected {
+    margin: auto;
+    text-align: center;
+    color: #888;
+    font-size: 1.1em;
+}
+
+.message-bubble {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message-bubble.enviada {
+    background-color: rgb(0, 89, 255);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.message-bubble.recebida {
+    background-color: #e9ecef;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    gap: 10px;
+}
+
+#messageInput {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    resize: none;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+#sendMessageBtn {
+    background-color: rgb(0, 89, 255);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 45px;
+}
+
+button#attachmentBtn {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    font-size: xx-large;
+    border: none;
+}
+
+/* ========================================================= */
+/* --- ESTILIZAÇÃO APRIMORADA PARA O BOTÃO VOLTAR --- */
+/* ========================================================= */
+
+.back-to-list-btn {
+    display: none; /* Mantém escondido por padrão em telas grandes */
+    background-color: transparent; /* Fundo transparente */
+    border: 1px solid #dcdcdc; /* Borda cinza clara e sutil */
+    color: #555; /* Cor do ícone um pouco mais escura */
+    font-size: 1.2em; /* Tamanho da seta */
+    font-weight: bold;
+    width: 40px;   /* Largura e altura iguais para um círculo perfeito */
+    height: 40px;
+    border-radius: 50%; /* Deixa o botão redondo */
+    cursor: pointer;
+    margin-right: 15px; /* Espaço entre o botão e a foto de perfil */
+
+    /* Centralização perfeita da seta (ícone) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove padding para não interferir na centralização */
+    line-height: 1; /* Garante consistência vertical */
+
+    /* Animação suave */
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Efeito ao passar o mouse */
+.back-to-list-btn:hover {
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    border-color: #c0c0c0; /* Borda um pouco mais escura */
+}
+
+/* Efeito ao clicar */
+.back-to-list-btn:active {
+    background-color: #e0e0e0; /* Fundo mais escuro */
+    transform: scale(0.95); /* Efeito de pressionar */
+}
+
+
+
+/* ===================================================== */
+/* --- DESIGN RESPONSIVO PARA A PÁGINA DE CHATS --- */
+/* ===================================================== */
+
+/* Para Tablets e Telas Menores (até 768px) */
+@media (max-width: 768px) {
+    .inbox-container {
+        overflow: hidden;
+    }
+
+    .conversation-list {
+        width: 100%;
+        height: calc(100vh - 70px);
+        border: none;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .chat-view {
+        width: 100%;
+        height: calc(100vh - 70px);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        background-color: white;
+    }
+
+    /* Quando um chat está ativo... */
+    .inbox-container.chat-active .conversation-list {
+        transform: translateX(-100%); /* ...a lista de conversas desliza para a esquerda */
+    }
+    .inbox-container.chat-active .chat-view {
+        transform: translateX(0%); /* ...a janela de chat desliza para a tela */
+    }
+
+    /* Mostra o botão de voltar em telas pequenas */
+    .back-to-list-btn {
+        display: flex; /* Alterado para flex para manter a centralização */
+    }
+}

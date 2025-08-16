@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Cal Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --darkBlue: #023047;
+  --mediumBlue: #219ebc;
+  --ligthBlue:#8ecae6;
+  --yellow: #ffb703;
+}
+
+a { /*colocar este fade em uma class propia para a "categoria"*/
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  align-items: center;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: var(--mediumBlue);
+  height: 10vh;
+}
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 0;
+  align-items: center;
+
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+ul.nav-list {
+  padding-bottom: 1vh;
+}
+
+/*inicio do dropdown*/
+button.btn.btn-danger.dropdown-toggle{
+  position: relative;
+  background-color: #ebc25a;
+  border:none;
+  align-items: center;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 6vh;
+  left: -5vh;
+  background-color: var(--darkBlue);
+  border: 0px solid #ccc;
+  list-style: none;
+  padding: 5px;
+  margin: 0px;
+  z-index: 1000;
+  min-width: 160px
+}
+
+ul.dropdown-menu.show {
+  background-color: white;
+}
+
+.dropdown-menu.show li {
+  padding: 10px 15px;
+  border-bottom: 1px solid rgb(156, 154, 154) ;
+  margin-right: 2vw;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: gray;
+  display: block;
+}
+.dropdown-menu.show {
+  display: block;
+}
+/*fim do dropdown*/
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: -10vh;
+    width: 50vw;
+    height: 92vh;
+    background: hsl(219, 63%, 25%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+ul li .nav-list.nav-list.active {
+  padding: -40px;
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*BARRA DE PESQUISA*/
+.barra-de-pesquisa :active{
+  border: none;
+}
+
+.barra-de-pesquisa{
+  justify-content: center;
+  width: auto;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 400px; /* Largura da barra */
+  margin: 20px auto; /* Centraliza e adiciona espaço */
+}
+
+.search-input {
+  flex-grow: 1; /* O campo de texto ocupa o espaço disponível */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  border-radius: 10px 0px 0px 10px;
+  height: auto;
+  outline: none;
+}
+
+/*BOTÃO BARRA DE PESQUISA*/
+button.search-button {
+  background-color: #ebc25a; /* Cor do botão */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 0px 10px 10px 0px;
+  height: 44px;
+}
+
+button.search-button img {
+  width: 3.5vh;
+  padding-bottom: 7px
+}
+
+.search-button:hover {
+  background-color: #FFB703; /* Cor do botão ao passar o mouse */
+}
+
+.search-button i { /* Estilo do ícone (se você usar um ícone) */
+  font-size: 18px;
+}

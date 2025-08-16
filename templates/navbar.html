@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desapego</title>
+  <link rel="stylesheet" href="../CSS/navbar.css" />
+  <link rel="shortcut icon" href="./misc/logo.nav.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+</head>
+
+<header>
+  <nav>
+    <!-- Logo -->
+    <a class="logo" href="index.html">
+      <img src="./misc/logo.nav.png" width="60px" />
+    </a>
+    <!-- barra de pesquisa -->
+    <div class="Barra-de-pesquisa">
+      <form class="search-form">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Buscar em Desapego..."
+          name="q">
+          <button type="submit" class="search-button"> 
+          <img src="./misc/search.png" alt="Buscar" width="15px" />
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+
+    <!-- Menu de navegação -->
+    <ul class="nav-list">
+
+      <!-- Menu dropdown clicável -->
+      <div class="dropdown">
+        <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Login
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Entrar</a></li>
+          <li><a class="dropdown-item" href="#">Cadastrar</a></li>
+
+        </ul>
+      </div>
+      
+      <!-- Icones SVG (Curtidas e Carrinho de compras) -->
+  </nav>
+</header>
+<script src="./mobile-navbar.js"></script>
+<script src="./backEnd/products.js"></script>
+<script src="./backEnd/prodFilters.js"></script>
+<script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

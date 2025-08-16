@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed Social</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Esquerda - Perfil -->
+    <aside class="sidebar left">
+      <div class="profile">
+        <img src="https://via.placeholder.com/150" alt="Foto do perfil" class="profile-pic">
+        <h2>Nome do Usuário</h2>
+        <p>@username</p>
+        <div class="stats">
+          <div class="stat">
+            <span class="number">1.234</span>
+            <span class="label">Seguidores</span>
+          </div>
+          <div class="stat">
+            <span class="number">567</span>
+            <span class="label">Seguindo</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Feed Central - Posts -->
+    <main class="feed">
+      <div class="post-creator">
+        <textarea placeholder="O que você está pensando?"></textarea>
+        <button class="post-button">Postar</button>
+      </div>
+
+      <div class="posts" id="posts">
+        <!-- Posts serão inseridos aqui via JavaScript -->
+      </div>
+    </main>
+
+    <!-- Sidebar Direita - Leaderboard -->
+    <aside class="sidebar right">
+      <div class="leaderboard">
+        <h3>Top Usuários</h3>
+        <ol>
+          <li>@user1 <span>1.2K pontos</span></li>
+          <li>@user2 <span>1.1K pontos</span></li>
+          <li>@user3 <span>1.0K pontos</span></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

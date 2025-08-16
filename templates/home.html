@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres para suportar acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Torna o site responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece na aba do navegador -->
+    <title>SoluMatch - Conectando Empresas e Talentos</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="../CSS/home.css">
+</head>
+<body>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header class="header">
+        <!-- Barra de navegação principal -->
+        <nav class="navbar">
+            <!-- Logo/nome da empresa -->
+            <div class="logo">
+                <img src="../misc/logo2.jpg" width="50vh">
+                <h2>Solu<span>Match<span></h2>
+            </div>
+            
+            <!-- Links de navegação do menu -->
+            <div class="nav-links">
+                <!-- Link ativo (página atual) -->
+                <a src="../templates/form_problema.html" class="nav-link active">Eu quero contratar</a>
+                <!-- Link normal -->
+                <a href="#" class="nav-link">Eu quero trabalhar</a>
+                <!-- Link de login -->
+                <a href="../templates/login.php" class="login-link">Faça login</a>
+                <!-- Botão principal de call-to-action -->
+                <a href="../templates/cadastro.php"  class="cta-button">Cadastre-se</a>
+            </div>
+            
+            <!-- Menu hambúrguer para dispositivos móveis (3 linhas) -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+    <main class="main-content">
+        <!-- Seção com indicadores de confiança/benefícios -->
+        <div class="trust-indicators">
+            <!-- Cada indicador tem um ícone e texto -->
+            <div class="indicator">
+                <span class="icon">✓</span>
+                <span>Conexões inteligentes</span>
+            </div>
+            <div class="indicator">
+                <span class="icon">🛡️</span>
+                <span>Parcerias garantidas</span>
+            </div>
+            <div class="indicator">
+                <span class="icon">⚡</span>
+                <span>Processo otimizado</span>
+            </div>
+        </div>
+
+        <!-- SEÇÃO HERO (principal da página) -->
+        <section class="hero">
+            <div class="hero-content">
+                <!-- Lado esquerdo: texto principal -->
+                <div class="hero-text">
+                    <!-- Título principal da página -->
+                    <h1>
+                        Conecte sua empresa com
+                        <!-- Texto destacado em cor diferente -->
+                        <span class="highlight">os melhores parceiros</span>
+                        e profissionais qualificados
+                    </h1>
+                    
+                    <!-- Descrição/subtítulo -->
+                    <p class="hero-description">
+                        Desenvolva seu negócio de forma rápida e assertiva.
+                        Conectamos você com empresas e profissionais ideais através de 
+                        filtros inteligentes e critérios personalizados.
+                    </p>
+                    
+                    <!-- Botões de ação -->
+                    <div class="hero-buttons">
+                        <!-- Botão principal -->
+                        <a href="../templates/form_problema.html"class="primary-button">Eu quero contratar</a>
+                        <!-- Link secundário com seta -->
+                        <a href="../" class="secondary-button">
+                            Você quer trabalhar? 
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Lado direito: elementos visuais decorativos -->
+                <div class="hero-visuals">
+                    <!-- Imagens de perfil posicionadas absolutamente -->
+                    <div class="profile-image profile-1">
+                        <!-- Placeholder para foto de perfil -->
+                        <img src="/placeholder.svg?height=80&width=80" alt="Profissional 1">
+                    </div>
+                    <div class="profile-image profile-2">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Profissional 2">
+                    </div>
+                    <div class="profile-image profile-3">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Profissional 3">
+                    </div>
+                    <div class="profile-image profile-4">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Profissional 4">
+                    </div>
+                    <div class="profile-image profile-5">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Profissional 5">
+                    </div>
+                    <div class="profile-image profile-6">
+                        <img src="/placeholder.svg?height=80&width=80" alt="Profissional 6">
+                    </div>
+                    
+                    <!-- Elementos decorativos (círculos coloridos) -->
+                    <div class="decorative-element element-1"></div>
+                    <div class="decorative-element element-2"></div>
+                    <div class="decorative-element element-3"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Link para o arquivo JavaScript -->
+    <script src="../JavaScript/home.js"></script>
+</body>
+</html>

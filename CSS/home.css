@@ -1,0 +1,437 @@
+/* RESET CSS - Remove estilos padrão do navegador */
+* {
+  margin: 0; /* Remove margem padrão */
+  padding: 0; /* Remove padding padrão */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+/* ESTILOS GERAIS DO BODY */
+body {
+  /* Define a fonte principal (usa fontes do sistema) */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6; /* Espaçamento entre linhas */
+  color: #333; /* Cor do texto */
+  background-color: #fafafa; /* Cor de fundo cinza claro */
+}
+
+/* ESTILOS DO CABEÇALHO */
+.header {
+  background: white; /* Fundo branco */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  position: sticky; /* Fica fixo no topo ao rolar */
+  top: 0; /* Posição no topo */
+  z-index: 100; /* Fica acima de outros elementos */
+}
+
+.logo img{
+  float: left;
+  margin-right: 5px;
+}
+
+.logo h2{
+  float: right;
+}
+
+.logo h2 span{
+  color: rgb(0, 89, 255);
+}
+
+/* BARRA DE NAVEGAÇÃO */
+.navbar {
+  display: flex; /* Layout flexível */
+  justify-content: space-between; /* Espaça elementos nas extremidades */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 1rem 2rem; /* Espaçamento interno */
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* LOGO */
+.logo h2 {
+  color: #000000; /* Cor roxa */
+  font-size: 1.8rem; /* Tamanho da fonte */
+  font-weight: 700; /* Peso da fonte (negrito) */
+}
+
+/* CONTAINER DOS LINKS DE NAVEGAÇÃO */
+.nav-links {
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 2rem; /* Espaço entre elementos */
+}
+
+/* ESTILOS DOS LINKS DE NAVEGAÇÃO */
+.nav-link {
+  text-decoration: none; /* Remove sublinhado */
+  color: #666; /* Cor cinza */
+  font-weight: 500; /* Peso médio da fonte */
+  padding: 0.5rem 0; /* Espaçamento vertical */
+  border-bottom: 2px solid transparent; /* Borda invisível */
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+/* LINK ATIVO E HOVER */
+.nav-link.active,
+.nav-link:hover {
+  color: rgb(0, 89, 255); /* Muda cor para roxo */
+  border-bottom-color: rgb(0, 89, 255); /* Mostra borda roxa */
+}
+
+/* LINK DE LOGIN */
+.login-link {
+  text-decoration: none; /* Remove sublinhado */
+  color: #666; /* Cor cinza */
+  font-weight: 500; /* Peso médio */
+}
+
+/* BOTÃO PRINCIPAL DO HEADER */
+.cta-button {
+  background: rgb(0, 89, 255); /* Fundo roxo */
+  color: white; /* Texto branco */
+  border: none; /* Remove borda */
+  padding: 0.75rem 1.5rem; /* Espaçamento interno */
+  border-radius: 25px; /* Bordas arredondadas */
+  font-weight: 600; /* Fonte semi-negrito */
+  cursor: pointer; /* Cursor de mão */
+  transition: all 0.3s ease; /* Transição suave */
+  text-decoration: none;
+}
+
+/* EFEITO HOVER DO BOTÃO */
+.cta-button:hover {
+  background: rgb(0, 89, 255); /* Cor mais escura */
+  transform: translateY(-2px); /* Move para cima */
+}
+
+/* MENU MOBILE (inicialmente escondido) */
+.mobile-menu-toggle {
+  display: none; /* Escondido por padrão */
+  flex-direction: column; /* Empilha verticalmente */
+  cursor: pointer; /* Cursor de mão */
+}
+
+/* LINHAS DO MENU HAMBÚRGUER */
+.mobile-menu-toggle span {
+  width: 25px; /* Largura das linhas */
+  height: 3px; /* Altura das linhas */
+  background: #333; /* Cor das linhas */
+  margin: 3px 0; /* Espaço entre linhas */
+  transition: 0.3s; /* Transição para animação */
+}
+
+/* CONTAINER PRINCIPAL */
+.main-content {
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza */
+  padding: 2rem; /* Espaçamento interno */
+}
+
+/* INDICADORES DE CONFIANÇA */
+.trust-indicators {
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza */
+  gap: 3rem; /* Espaço entre elementos */
+  margin-bottom: 3rem; /* Margem inferior */
+  flex-wrap: wrap; /* Quebra linha se necessário */
+}
+
+/* CADA INDICADOR */
+.indicator {
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 0.5rem; /* Espaço entre ícone e texto */
+  color: #666; /* Cor cinza */
+  font-size: 0.9rem; /* Tamanho menor da fonte */
+}
+
+/* ÍCONES DOS INDICADORES */
+.icon {
+  font-size: 1.2rem; /* Tamanho maior para ícones */
+}
+
+/* SEÇÃO HERO PRINCIPAL */
+.hero {
+  position: relative; /* Para posicionamento absoluto dos filhos */
+  min-height: 70vh; /* Altura mínima (70% da tela) */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+/* CONTEÚDO DA SEÇÃO HERO */
+.hero-content {
+  display: grid; /* Layout em grade */
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  gap: 4rem; /* Espaço entre colunas */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%; /* Largura total */
+}
+
+/* TÍTULO PRINCIPAL */
+.hero-text h1 {
+  font-size: 3.5rem; /* Tamanho grande */
+  font-weight: 700; /* Negrito */
+  line-height: 1.2; /* Espaçamento entre linhas */
+  margin-bottom: 1.5rem; /* Margem inferior */
+  color: #1f2937; /* Cor escura */
+}
+
+/* TEXTO DESTACADO NO TÍTULO */
+.highlight {
+  color: rgb(0, 89, 255); /* Cor roxa */
+}
+
+/* DESCRIÇÃO/SUBTÍTULO */
+.hero-description {
+  font-size: 1.2rem; /* Tamanho médio */
+  color: #666; /* Cor cinza */
+  margin-bottom: 2rem; /* Margem inferior */
+  line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* CONTAINER DOS BOTÕES */
+.hero-buttons {
+  display: flex; /* Layout flexível */
+  gap: 1.5rem; /* Espaço entre botões */
+  align-items: center; /* Centraliza verticalmente */
+  flex-wrap: wrap; /* Quebra linha se necessário */
+}
+
+/* BOTÃO PRINCIPAL */
+.primary-button {
+  background: rgb(0, 89, 255); /* Fundo roxo */
+  color: white; /* Texto branco */
+  border: none; /* Remove borda */
+  padding: 1rem 2rem; /* Espaçamento interno */
+  border-radius: 25px; /* Bordas arredondadas */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  font-weight: 600; /* Semi-negrito */
+  cursor: pointer; /* Cursor de mão */
+  transition: all 0.3s ease; /* Transição suave */
+  text-decoration: none;
+}
+
+/* EFEITO HOVER DO BOTÃO PRINCIPAL */
+.primary-button:hover {
+  background: rgb(0, 89, 255); /* Cor mais escura */
+  transform: translateY(-2px); /* Move para cima */
+}
+
+/* BOTÃO SECUNDÁRIO (LINK) */
+.secondary-button {
+  text-decoration: none; /* Remove sublinhado */
+  color: #666; /* Cor cinza */
+  font-weight: 500; /* Peso médio */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 0.5rem; /* Espaço entre texto e seta */
+  transition: color 0.3s ease; /* Transição de cor */
+}
+
+/* HOVER DO BOTÃO SECUNDÁRIO */
+.secondary-button:hover {
+  color: rgb(0, 89, 255); /* Muda para roxo */
+}
+
+/* SETA DO BOTÃO SECUNDÁRIO */
+.arrow {
+  transition: transform 0.3s ease; /* Transição suave */
+}
+
+/* ANIMAÇÃO DA SETA NO HOVER */
+.secondary-button:hover .arrow {
+  transform: translateX(5px); /* Move seta para direita */
+}
+
+/* CONTAINER DOS ELEMENTOS VISUAIS */
+.hero-visuals {
+  position: relative; /* Para posicionamento absoluto dos filhos */
+  height: 500px; /* Altura fixa */
+}
+
+/* IMAGENS DE PERFIL */
+.profile-image {
+  position: absolute; /* Posicionamento absoluto */
+  width: 80px; /* Largura */
+  height: 80px; /* Altura */
+  border-radius: 50%; /* Formato circular */
+  overflow: hidden; /* Esconde partes que saem */
+  border: 3px solid white; /* Borda branca */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+  animation: float 6s ease-in-out infinite; /* Animação flutuante */
+}
+
+/* IMAGENS DENTRO DOS PERFIS */
+.profile-image img {
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  object-fit: cover; /* Mantém proporção */
+}
+
+/* POSICIONAMENTO DE CADA PERFIL */
+.profile-1 {
+  top: 50px; /* Distância do topo */
+  right: 100px; /* Distância da direita */
+  animation-delay: 0s; /* Sem atraso na animação */
+}
+
+.profile-2 {
+  top: 150px;
+  right: 200px;
+  animation-delay: 1s; /* Atraso de 1 segundo */
+}
+
+.profile-3 {
+  top: 250px;
+  right: 50px;
+  animation-delay: 2s; /* Atraso de 2 segundos */
+}
+
+.profile-4 {
+  top: 350px;
+  right: 150px;
+  animation-delay: 3s; /* Atraso de 3 segundos */
+}
+
+.profile-5 {
+  top: 100px;
+  right: 300px;
+  animation-delay: 4s; /* Atraso de 4 segundos */
+}
+
+.profile-6 {
+  top: 300px;
+  right: 280px;
+  animation-delay: 5s; /* Atraso de 5 segundos */
+}
+
+/* ELEMENTOS DECORATIVOS */
+.decorative-element {
+  position: absolute; /* Posicionamento absoluto */
+  border-radius: 50%; /* Formato circular */
+  opacity: 0.1; /* Transparência */
+}
+
+/* ELEMENTO DECORATIVO 1 */
+.element-1 {
+  width: 100px; /* Largura */
+  height: 100px; /* Altura */
+  background: linear-gradient(45deg, #6366f1, #8b5cf6); /* Gradiente */
+  top: 80px; /* Posição vertical */
+  right: 50px; /* Posição horizontal */
+  animation: rotate 20s linear infinite; /* Rotação contínua */
+}
+
+/* ELEMENTO DECORATIVO 2 */
+.element-2 {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #f59e0b, #ef4444); /* Gradiente laranja-vermelho */
+  top: 200px;
+  right: 320px;
+  animation: rotate 15s linear infinite reverse; /* Rotação reversa */
+}
+
+/* ELEMENTO DECORATIVO 3 */
+.element-3 {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #10b981, #3b82f6); /* Gradiente verde-azul */
+  top: 380px;
+  right: 100px;
+  animation: rotate 25s linear infinite; /* Rotação lenta */
+}
+
+/* ANIMAÇÃO DE FLUTUAÇÃO */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px); /* Posição inicial */
+  }
+  50% {
+    transform: translateY(-20px); /* Move para cima */
+  }
+}
+
+/* ANIMAÇÃO DE ROTAÇÃO */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Início */
+  }
+  to {
+    transform: rotate(360deg); /* Volta completa */
+  }
+}
+
+/* RESPONSIVIDADE PARA TABLETS */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem; /* Reduz padding */
+  }
+
+  .nav-links {
+    display: none; /* Esconde menu normal */
+  }
+
+  .mobile-menu-toggle {
+    display: flex; /* Mostra menu hambúrguer */
+  }
+
+  .main-content {
+    padding: 1rem; /* Reduz padding */
+  }
+
+  .trust-indicators {
+    gap: 1rem; /* Reduz espaço */
+    margin-bottom: 2rem; /* Reduz margem */
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr; /* Uma coluna só */
+    gap: 2rem; /* Reduz espaço */
+    text-align: center; /* Centraliza texto */
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem; /* Reduz tamanho do título */
+  }
+
+  .hero-description {
+    font-size: 1.1rem; /* Reduz tamanho da descrição */
+  }
+
+  .hero-buttons {
+    justify-content: center; /* Centraliza botões */
+  }
+
+  .hero-visuals {
+    height: 300px; /* Reduz altura */
+    order: -1; /* Move para cima */
+  }
+
+  .profile-image {
+    width: 60px; /* Reduz tamanho */
+    height: 60px;
+  }
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem; /* Título ainda menor */
+  }
+
+  .trust-indicators {
+    flex-direction: column; /* Empilha verticalmente */
+    align-items: center; /* Centraliza */
+    gap: 0.5rem; /* Reduz espaço */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Empilha botões */
+    width: 100%; /* Largura total */
+  }
+
+  .primary-button {
+    width: 100%; /* Botão ocupa largura total */
+  }
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../misc/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/ajuda.css">
+    <title>Central de Ajuda</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo_site">
+                   <a href="../templates/home.html"><img src="../misc/logo2.png" alt="" width="50vh"></a> 
+                </div>
+                <div class="logo">Central de Ajuda</div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#categorias">Categorias</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Como podemos ajudar você?</h1>
+            <p>Encontre respostas rápidas para suas dúvidas ou entre em contato conosco</p>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="Digite sua dúvida aqui..." id="searchInput">
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <div class="content-grid">
+                <div>
+                    <section class="faq-section fade-in" id="faq">
+                        <h2 class="section-title">
+                            ❓ Perguntas Frequentes
+                        </h2>
+                        
+                        <div class="faq-item" data-keywords="conta login senha">
+                            <button class="faq-question">
+                                Como criar uma conta?
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                Para criar uma conta, clique no botão "Cadastrar" no canto superior direito da página inicial. Preencha seus dados pessoais e siga as instruções enviadas para seu email.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-keywords="senha recuperar login">
+                            <button class="faq-question">
+                                Esqueci minha senha, como recuperar?
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                Na página de login, clique em "Esqueci minha senha". Digite seu email cadastrado e você receberá um link para redefinir sua senha.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-keywords="pagamento cartão boleto">
+                            <button class="faq-question">
+                                Quais formas de pagamento são aceitas?
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                Aceitamos cartões de crédito (Visa, Mastercard, American Express), cartões de débito, PIX, boleto bancário e transferência bancária.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-keywords="entrega prazo envio">
+                            <button class="faq-question">
+                                Qual o prazo de entrega?
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                O prazo de entrega varia conforme sua localização: Região Sudeste (2-3 dias úteis), Região Sul (3-4 dias úteis), demais regiões (5-7 dias úteis).
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-keywords="cancelar pedido devolver">
+                            <button class="faq-question">
+                                Como cancelar um pedido?
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                Você pode cancelar seu pedido em até 24 horas após a compra. Acesse "Meus Pedidos" em sua conta e clique em "Cancelar" ao lado do pedido desejado.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-keywords="suporte contato atendimento">
+                            <button class="faq-question">
+                                Como entrar em contato com o suporte?
+                                <span class="faq-icon">▼</span>
+                            </button>
+                            <div class="faq-answer">
+                                Você pode nos contatar através do chat online, email (suporte@exemplo.com), telefone (11) 1234-5678 ou WhatsApp. Nosso horário de atendimento é de segunda a sexta, das 8h às 18h.
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="sidebar">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#faq">Perguntas Frequentes</a></li>
+                        <li><a href="#categorias">Categorias de Ajuda</a></li>
+                        <li><a href="#contato">Fale Conosco</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Status do Sistema</a></li>
+                    </ul>
+
+                    <h3 style="margin-top: 2rem;">Precisa de Mais Ajuda?</h3>
+                    <p style="margin-bottom: 1rem; color: var(--text-light);">
+                        Nossa equipe está pronta para ajudar você!
+                    </p>
+                    <button class="contact-button" id="abrirChatbot">Falar com Suporte</button>
+                </aside>
+            </div>
+
+            <section class="help-categories fade-in" id="categorias">
+                <div class="category-card">
+                    <div class="category-icon">👤</div>
+                    <h3>Conta e Perfil</h3>
+                    <p>Gerenciar sua conta, alterar dados pessoais, configurações de privacidade e muito mais.</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">💳</div>
+                    <h3>Pagamentos</h3>
+                    <p>Dúvidas sobre formas de pagamento, faturas, reembolsos e questões financeiras.</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">📦</div>
+                    <h3>Pedidos e Entregas</h3>
+                    <p>Acompanhar pedidos, prazos de entrega, problemas com envio e devoluções.</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🔧</div>
+                    <h3>Problemas Técnicos</h3>
+                    <p>Resolver problemas de acesso, bugs, lentidão e outras questões técnicas.</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">📱</div>
+                    <h3>Aplicativo Mobile</h3>
+                    <p>Ajuda com o aplicativo para celular, instalação, atualizações e funcionalidades.</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🛡️</div>
+                    <h3>Segurança</h3>
+                    <p>Proteger sua conta, denunciar atividades suspeitas e configurações de segurança.</p>
+                </div>
+            </section>
+
+            <section class="contact-section" id="contato">
+                <h2>Ainda não encontrou o que procura?</h2>
+                <p style="margin-bottom: 2rem;">Nossa equipe de suporte está sempre pronta para ajudar você!</p>
+                <button class="contact-button" id="abrirChatbotRodape">Entrar em Contato</button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Central de Ajuda. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="voltarAoTopo">↑</button>
+
+    <div id="modalChatbot" class="chatbot-modal">
+        <div class="chatbot-content">
+            <span class="fechar-btn">&times;</span>
+            <h3>Chatbot de Suporte</h3>
+            <div class="area-chat" id="areaChat">
+                <div class="mensagem bot-mensagem">Olá! Como posso ajudar você hoje?</div>
+            </div>
+            <input type="text" id="inputChat" placeholder="Digite sua mensagem...">
+            <button id="enviarMensagem">Enviar</button>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/@google/generative-ai@latest/dist/index.min.js"></script>
+    <script src="../JavaScript/chat_bot.js"></script>
+    <script src="../JavaScript/ajuda.js"></script>
+</body>
+</html> 
